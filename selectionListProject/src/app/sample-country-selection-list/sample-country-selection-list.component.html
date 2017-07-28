@@ -1,0 +1,7 @@
+<h2>Sample country selection list</h2>
+
+<select [(ngModel)]="selectedCountry.id" (ngModelChange)="updateSelectedValue($event)">
+  <option *ngFor="let country of countries" [value]="country.id">{{country.name}}</option>
+</select>
+
+Selected country: {{selectedCountry | json}}

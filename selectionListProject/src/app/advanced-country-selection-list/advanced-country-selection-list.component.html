@@ -1,0 +1,8 @@
+<h2>Advanced country selection list</h2>
+
+<select [(ngModel)]="selectedCountry"  [compareWith]="compareCountries">
+  <option *ngFor="let country of countries" [ngValue]="country">{{country.name}}</option>
+</select>
+
+Selected country: {{selectedCountry | json}}
+
